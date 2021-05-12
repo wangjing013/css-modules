@@ -1,0 +1,20 @@
+/*
+// 默认等价于 :local(.title){}
+.title{
+  background-color: red;
+}
+
+:global(.title){
+  background-color: green;
+} */
+
+/**
+.title {
+  composes: bg from './other.css'
+}
+**/
+@value colors:  "./colors.css";
+@value vblue, vred, vgreen from colors;
+.title {
+  background-color: vblue;
+}
